@@ -1,0 +1,24 @@
+<!-- <table mat-table [dataSource]="flatsData">
+
+    <ng-container matColumnDef="FlatNumber">
+        <th mat-header-cell *matHeaderCellDef>Flat Number</th>
+        <td mat-cell *matCellDef="let element">{{element.FlatNumber}}</td>
+
+    </ng-container>
+
+</table> -->
+<mat-card >
+    <span>Flat No</span>
+    <span style="margin-left: 10%;">Name</span>
+    <span style="margin-left: 10%;">Block</span>
+    <span style="margin-left: 10%;">Status</span>
+    <span style="margin-left: 10%;">Score</span>
+</mat-card>
+
+<mat-card style="margin-top:2%" *ngFor="let flat of flatsData">
+    <span>{{flat.FlatNumber}}</span>
+    <span style="margin-left: 10%;">{{flat.FlatName}}</span>
+    <span style="margin-left: 10%;">{{flat.Block}}</span>
+    <span style="margin-left: 10%;">{{flat.Status}}</span>
+    <span style="margin-left: 10%;">{{flat.Score}}</span>
+</mat-card>
